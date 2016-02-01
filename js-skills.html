@@ -374,7 +374,22 @@ $('#make-a-porcupine').click(function() { setTimeout(slowDown, 1000) });
 </fieldset>
 
 <script>
-  // put your code here
+
+
+  // button.addEventListener('click', function justAlert(evt) {
+  //   evt.preventDefault(); 
+  //   alert("Don't Submit Yet!");
+  // });
+
+  function favFood(evt) {
+      evt.preventDefault();
+      var food = $("#favorite-food-input").val(); 
+      $('#agreeable-text').text("I like " + food + ", too.");
+  }
+
+  $('#agreeable-form').submit(favFood);
+
+
 </script>
 
 <div class="hint">
