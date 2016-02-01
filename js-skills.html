@@ -418,7 +418,48 @@ $('#make-a-porcupine').click(function() { setTimeout(slowDown, 1000) });
 </fieldset>
 
 <script>
-  // put your code here
+
+  $('#play-guessing-game').click(numberGuessingGame); 
+
+  function numberGuessingGame() 
+
+  {
+
+    var zeroToOne = Math.random(); 
+    var RandomFloat = 100*zeroToOne; 
+
+    var correctNumber = Math.round(RandomFloat);
+
+    console.log(correctNumber);
+
+    var userGuess = prompt("Guess a number between 1 and 100");
+    var userGuess = parseInt(userGuess);
+
+    if (userGuess === correctNumber) 
+      {
+      console.log("Success!!");
+      alert("You guessed correctly!");
+      }
+
+    else {
+
+            while (userGuess != correctNumber) 
+            {
+
+                var userGuess = prompt("Incorrect! Guess again!");
+
+            }
+
+            alert("You finally got it, yay!");
+
+          }
+
+
+  }
+
+  
+
+ 
 </script>
 
 <div class="hint">
