@@ -445,8 +445,14 @@ $('#make-a-porcupine').click(function() { setTimeout(slowDown, 1000) });
 
             while (userGuess != correctNumber) 
             {
+                if (userGuess < correctNumber) 
+                {
+                  var userGuess = prompt("Too low! Guess again!");
+                }
 
-                var userGuess = prompt("Incorrect! Guess again!");
+                else {
+                  var userGuess = prompt("Too high! Guess again!"); 
+                }
 
             }
 
